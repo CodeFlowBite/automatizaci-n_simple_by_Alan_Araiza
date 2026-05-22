@@ -19,7 +19,6 @@ COMPANY_TICKERS = {
 def obtener_precio_accion(user_input):
     company_name = sanitizar(user_input)
     ticker = COMPANY_TICKERS.get(company_name)
-    print(company_name, ticker)
 
     # Buscar si el nombre de la empresa esta en el diccionario
 

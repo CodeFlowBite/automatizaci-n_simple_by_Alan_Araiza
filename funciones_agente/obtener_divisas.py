@@ -1,10 +1,9 @@
 import requests
 
 def procesar_conversion_divisas(user_input: str):
-    # Pasamos todo a mayúsculas para evitar problemas con 'usd' o 'usd'
+
     comando = user_input.upper().split()
     
-    # Buscamos un formato simple basado en reglas: ["CONVERTIR", "100", "USD", "A", "MXN"]
     comandos_ceros = ["CONVERTIR", "CONVIERTE", "TRANSFORMA", "CAMBIA", "CAMBIAR"]
     comandos_a = ["A", "EN", "A POR" ,"CON"]
     if len(comando) == 5 and (comando[0] in comandos_ceros) and (comando[3] in comandos_a):
